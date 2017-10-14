@@ -1,0 +1,10 @@
+---
+- name: Install php extensions
+  yum: name={{ item }} state=present
+  become: yes
+  with_items:
+    - icu
+    - libicu
+    - libicu-devel
+    - php-devel
+  

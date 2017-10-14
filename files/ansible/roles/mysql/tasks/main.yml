@@ -1,0 +1,14 @@
+---
+- name: start mysql
+  service: name=mysqld state=started
+  become: yes
+
+- name: Create mysql user
+  mysql_user:
+    name={{ wp_mysql_user }}
+    password={{ wp_mysql_password }}
+    priv=*.*:ALL
+    login_user=root
+
+- name: Create mysql database
+  mysql_db: name={{ wp_mysql_db }} state=present login_user={{ wp_mysql_user }} login_password={{ wp_mysql_password }}

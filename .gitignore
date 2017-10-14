@@ -1,0 +1,12 @@
+# Compiled files
+*.tfstate
+*.tfstate.backup
+.terraform.tfstate.lock.info
+plan.out
+
+# Module directory
+.terraform/
+secrets.tfvars
+.idea/*
+*.DS_Store*
+*.pem
