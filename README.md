@@ -22,7 +22,7 @@ openvpn_admin_pw - open vpn admin password
 
 admin_ip - IP to allow admin access to certain features
 
-**Once the the key is created and the vars are updated, run ```make all``` **
+**Once the the key is created and the vars are updated, run ```make all```**
 
 ### Makefile
 
